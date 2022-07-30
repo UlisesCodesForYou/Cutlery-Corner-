@@ -11,7 +11,7 @@
 
 .logo {
     font-size: 2rem;
-    color: white;
+    color: black;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -43,50 +43,27 @@
     color: white;
 }
 
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: #0087ca;
-}
 
-.hover-underline-animation:after {
+
+/*I am still working on the css styles here. */
+
+.header a hover-underliine-animation{
     content: '';
-    position: absolute;
+    position: relative;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: #cc2062;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
-.hover-underline-animation:hover:after {
+.header a:hover {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
-
-/*I am still working on the css styles here. */
-
-/*.header a hover-underliine-animation: after{*/
-/*    content: '';*/
-/*    position: relative;*/
-/*    width: 100%;*/
-/*    transform: scaleX(0);*/
-/*    height: 2px;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    background-color: #cc2062;*/
-/*    transform-origin: bottom right;*/
-/*    transition: transform 0.25s ease-out;*/
-/*}*/
-
-/*.header a:hover {*/
-/*    transform: scaleX(1);*/
-/*    transform-origin: bottom left;*/
-/*}*/
 
 
 .badge {

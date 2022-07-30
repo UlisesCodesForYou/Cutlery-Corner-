@@ -9,11 +9,14 @@ import SaleAndClearance from "./pages/SaleAndClearance";
 import TopBrands from "./pages/TopBrands";
 import HomePage from "./pages/HomePage";
 import MainNavigation from "./components/MainNavigation";
+import MainFooter from "./components/MainFooter";
+import TopLinks from "./components/TopLinks";
 
 
 function App() {
   return (
     <>
+      <TopLinks />
       <MainNavigation />
       <Switch>
         <Route path='/' exact>
@@ -38,6 +41,8 @@ function App() {
           <SaleAndClearance />
         </Route>
       </Switch>
+
+      <MainFooter />
 
 
 

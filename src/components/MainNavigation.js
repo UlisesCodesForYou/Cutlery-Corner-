@@ -5,7 +5,6 @@ const MainNavigation = () => {
     return (
         <>
             <header className={classes.header}>
-                <div className={classes.logo}>Cutlery Corner</div>
                 <nav>
                     <ul>
                         <li>
