@@ -1,0 +1,48 @@
+/*Hero image styles*/
+.hero {
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*End of Hero image styles*/
+
+/*Grid Image styles*/
+.grid {
+    margin: 0;
+    --gap: 16px;
+    --num--cols: 3;
+    --row--height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num--cols), 1fr);
+    grid-auto-rows: var(--row--height);
+    gap: var(--gap);
+}
+.grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*End of Grid image styles.*/
+
+/*Media query for grid and hero images*/
+@media screen and (max-width: 1024px) {
+    .grid{
+        --num--cols: 2;
+        --row--height: 200px;
+    }
+    .hero{
+        --num--cols: 1;
+        --row--height: 200px;
+    }
+}

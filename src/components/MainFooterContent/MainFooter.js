@@ -1,6 +1,6 @@
 import classes from "./MainFooter.module.css";
 
-const MainFooter = () => {
+export const MainFooter = () => {
     return (
         <>
             <footer className={classes.footer}>
@@ -15,4 +15,3 @@ const MainFooter = () => {
     )
 }
 
-export default MainFooter

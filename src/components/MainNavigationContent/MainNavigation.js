@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import classes from './MainNavigation.module.css'
 
-const MainNavigation = () => {
+export const MainNavigation = () => {
     return (
         <>
             <header className={classes.header}>
@@ -36,4 +36,3 @@ const MainNavigation = () => {
     )
 }
 
-export default MainNavigation

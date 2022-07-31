@@ -1,4 +1,4 @@
-const TopLinks = () => {
+export const TopLinks = () => {
     return (
         <>
             <div>
@@ -22,5 +22,5 @@ const TopLinks = () => {
     )
 }
 
-export default TopLinks
+
 
