@@ -1,4 +1,4 @@
-const KnifeServicing = () => {
+export const KnifeServicing = () => {
     return (
         <div>
             <p>This is the knife servicing page modal with info </p>
@@ -6,4 +6,3 @@ const KnifeServicing = () => {
     )
 }
 
-export default KnifeServicing;

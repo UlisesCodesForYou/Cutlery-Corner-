@@ -1,4 +1,4 @@
-const Brands = () => {
+export const Brands = () => {
     return (
         <div>
             <p>This is the brands page! </p>
@@ -6,5 +6,5 @@ const Brands = () => {
     )
 }
 
-export default Brands
+
 ;

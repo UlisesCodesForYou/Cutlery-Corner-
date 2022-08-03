@@ -1,4 +1,4 @@
-const SaleAndClearance = () => {
+export const SaleAndClearance = () => {
     return (
         <div>
             <p>This is the sale and clearance page! </p>
@@ -6,4 +6,3 @@ const SaleAndClearance = () => {
     )
 }
 
-export default SaleAndClearance;

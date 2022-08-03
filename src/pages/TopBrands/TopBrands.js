@@ -1,6 +1,5 @@
 
-
-const TopBrands = () => {
+export const TopBrands = () => {
     return (
         <div>
             <p>This is the top brands page! </p>
@@ -8,4 +7,3 @@ const TopBrands = () => {
     )
 }
 
-export default TopBrands;

@@ -4,29 +4,30 @@ import {Route, Switch} from 'react-router-dom'
 import BestSellers from "./pages/BestSellers";
 import Brands from "./pages/Brands";
 import KnivesAndAccessories from "./pages/KnivesAndAccessories";
-import NewArraivals from "./pages/NewArraivals";
+import NewArrivals from "./pages/NewArrivals";
 import SaleAndClearance from "./pages/SaleAndClearance";
 import TopBrands from "./pages/TopBrands";
 import HomePage from "./pages/HomePage";
+
 import MainFooter from "./components/MainFooterContent";
-import MainNavigation from "./components/MainNavigationContent";
-import TopLinks from "./components/TopLinksContent";
+import MainNavigation from "./components/SubNavBarContent";
+import NavBarContent from "./components/NavBarContent";
 
 
 function App() {
   return (
     <>
-     <TopLinks />
+     <NavBarContent />
       <MainNavigation />
       <Switch>
         <Route path='/' exact>
-          <HomePage />
+           <HomePage />
         </Route>
         <Route path='/top-brands'>
           <TopBrands />
         </Route>
         <Route path='/new-arrivals'>
-          <NewArraivals />
+          <NewArrivals />
         </Route>
         <Route path='/best-sellers'>
           <BestSellers />

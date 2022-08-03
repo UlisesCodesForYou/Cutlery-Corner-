@@ -1,4 +1,4 @@
-export const TopLinks = () => {
+export const NavBarContent = () => {
     return (
         <>
             <div>

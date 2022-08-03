@@ -1,4 +1,4 @@
-const BestSellers = () => {
+ export const BestSellers = () => {
     return (
     <div>
         <p>This is the best sellers page! </p>
@@ -6,4 +6,3 @@ const BestSellers = () => {
 )
 }
 
-export default BestSellers;

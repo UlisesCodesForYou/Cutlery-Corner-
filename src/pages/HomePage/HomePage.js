@@ -1,6 +1,6 @@
 import classes from './HomePage.module.css'
 
-const HomePage = () => {
+export const HomePage = () => {
     return (
         <div>
             <div className={classes.hero}>
@@ -20,4 +20,3 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
