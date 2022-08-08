@@ -1,32 +1,32 @@
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import classes from './MainNavigation.module.css'
 
-export const MainNavigation = () => {
+export const SubNavBarContent = () => {
     return (
         <>
             <header className={classes.header}>
                 <nav>
                     <ul>
                         <li>
-                            <Link to='/'>Home Page</Link>
+                            <NavLink to='/'>Home Page</NavLink>
                         </li>
                         <li>
-                            <Link to='/top-brands'>Top Brands</Link>
+                            <NavLink to='/top-brands'>Top Brands</NavLink>
                         </li>
                         <li>
-                            <Link to='/new-arrivals'>New Arrivals</Link>
+                            <NavLink to='/new-arrivals'>New Arrivals</NavLink>
                         </li>
                         <li>
-                            <Link to='/best-sellers'>Best Sellers</Link>
+                            <NavLink to='/best-sellers'>Best Sellers</NavLink>
                         </li>
                         <li>
-                            <Link to='/brands'>Brands</Link>
+                            <NavLink to='/brands'>Brands</NavLink>
                         </li>
                         <li>
-                            <Link to='/knives-and-accessories'>Knives Accessories</Link>
+                            <NavLink to='/knives-and-accessories'>Knives Accessories</NavLink>
                         </li>
                         <li>
-                            <Link to='/sale-and-clearance'>Sale & Clearance</Link>
+                            <NavLink to='/sale-and-clearance'>Sale & Clearance</NavLink>
                         </li>
 
                     </ul>

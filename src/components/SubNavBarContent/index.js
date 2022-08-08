@@ -1,3 +1,3 @@
-import {MainNavigation} from "./MainNavigation";
+import {SubNavBarContent} from "./SubNavBarContent";
 
-export default MainNavigation;
+export default SubNavBarContent;

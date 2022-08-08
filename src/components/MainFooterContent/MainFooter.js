@@ -1,22 +1,39 @@
 import classes from "./MainFooter.module.css";
+import {NavLink} from "react-router-dom";
+
 
 export const MainFooter = () => {
     return (
         <>
             <footer className={classes.footer}>
                 <ul>
-                    <li>FREE SHIPPING AND RETURNS ON ALL ORDERS</li>
-                    <li>KNIFE SERVICING</li>
-                    <li>CREATE AN ACCOUNT</li>
-                    <li>EXPERT ADVICE</li>
+                    <li>
+                        <NavLink to='/Free-Shipping-And-Returns-Info'>FREE SHIPPING AND RETURNS ON ALL ORDERS</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/Knife-Servicing-Info'>KNIFE SERVICING</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/Create-An-Account'>CREATE AN ACCOUNT</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/Expert-Advice'>EXPERT ADVICE</NavLink>
+                    </li>
                 </ul>
+
                 <ul>
-                    <li>Follow Us!</li>
+                    <li>
+                        <NavLink to='/Follow-Us'>Follow Us!</NavLink>
+                    </li>
                     <li>Socials go here</li>
-                    <li>Help</li>
+                    <li>
+                        <NavLink to='/Help'>Help</NavLink>
+                    </li>
                     <li>Multiple links for help goes here</li>
-                    <li>Policies</li>
-                        <li>This store is a static site I created using REACT. So, the contents on this site are just for demonstration purposes. Thank you! </li>
+                    <li>
+                        <NavLink to='/Policies'>Policies</NavLink>
+                    </li>
+
                 </ul>
             </footer>
         </>

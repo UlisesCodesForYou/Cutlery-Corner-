@@ -1,25 +1,27 @@
+
+// import classes from './NavBarContent.module.css'
+import {NavLink} from "react-router-dom";
+
 export const NavBarContent = () => {
     return (
         <>
-            <div>
-                <ul>
-                    <li>
-                        <p>CUTLERY CORNER This is the logo</p>
-                    </li>
-                    <li>
-                        <p>CONTACT US</p>
-                    </li>
-                    <li>
-                        <p>TRACK YOUR ORDER</p>
-                    </li>
-                    <li>
-                        <p>SHOPPING CART</p>
-                    </li>
-                </ul>
-            </div>
+            <nav>
+                <header>
+                    <nav>
+                        <ul>
+                            <li>
+                                <NavLink to = 'contact-us'>Contact Us</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to = 'track-your-order'>Track Your Order</NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </nav>
         </>
-
     )
+
 }
 
 
