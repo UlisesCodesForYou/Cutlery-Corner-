@@ -1,3 +1,3 @@
-import {useInput} from "./index";
+import {useInput} from './useInput';
 
-export default useInput()
+export default useInput

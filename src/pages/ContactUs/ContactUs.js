@@ -1,29 +1,41 @@
-import {useState} from "react";
+import useInput from '../../customHooks/index'
 
-export const ContactUs = (props) => {
+const isNotEmpty = value => value.trim() !== '';
+const isEmail = value => value.includes('@');
 
-//  Custom hook is gonna go here.  I need to fiinish up.  I need to watch the vid that covers custom hooks.
+export const ContactUs = () => {
+
+    const {
+        value: enteredName,
+        isValid: enteredNameIsValid,
+        hasError: nameInputHasError,
+        valueChangeHandler: nameChangedHandler,
+        reset: resetNameInput,
+        inputBlurHandler: nameBlurHandler
+    } = useInput(isNotEmpty)
+
+    const {
+        value: enteredEmail,
+        isValid: enteredEmailIsValid,
+        hasError: emailInputHasError,
+        valueChangeHandler: emailChangedHandler,
+        reset: resetEmailInput,
+        inputBlurHandler: emailBlurHandler
+    } = useInput(isEmail);
+
     let formIsValid = false
-
-    if(enteredNameIsValid) {
+    if (enteredNameIsValid && enteredEmailIsValid) {
         formIsValid = true
     }
 
-
-
-
-
     const formSubmissionHandler = event => {
         event.preventDefault()
-        setEnteredNameIsTouched(true)
 
         if (!enteredNameIsValid) {
-
             return
         }
-        setEnteredName('')
-        setEnteredNameIsTouched(false)
-
+        resetNameInput()
+        resetEmailInput()
     }
 
 
@@ -41,11 +53,20 @@ export const ContactUs = (props) => {
             <form onSubmit={formSubmissionHandler}>
                 <div>
                     <label htmlFor="name">Your Name</label>
-                    <input type='text' id='name' onChange={nameInputChangeHandler} onBlur={nameInputBlurHandler}
+                    <input type='text'
+                           id='name'
+                           onChange={nameChangedHandler}
+                           onBlur={nameBlurHandler}
                            value={enteredName}/>
-                    {nameInputIsInvalid && <p>You must enter your name.</p>}
+                    {nameInputHasError && <p>You must enter your name.</p>}
                     <label htmlFor='email'>E-mail</label>
-                    <input type='email' id='email'/>
+                    <input
+                        type='email'
+                        id='email'
+                        onChange={emailChangedHandler}
+                        onBlur={emailBlurHandler}
+                        value={enteredEmail}/>
+                    {emailInputHasError && <p>Please enter a valid email.</p>}
                     <label htmlFor='topic'>Enter your question topic</label>
                     <input type='text' id='topic'/>
                 </div>

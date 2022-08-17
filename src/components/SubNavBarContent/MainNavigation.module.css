@@ -7,8 +7,7 @@
     align-items: center;
     overflow: hidden;
     justify-content: space-between;
-    /*background-image: linear-gradient(45deg, #A6B5EC 10%, #2B396B 98%);*/
-    background-image: linear-gradient(45deg, #FAF9F5 10%, #384D08 88%);
+    background-color: #ebebf0;
     padding: 0 10%;
 }
 
@@ -31,7 +30,7 @@
 .header a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: black;
+    color: #252525;
 }
 
 .header a:hover,
@@ -39,7 +38,7 @@
 .header a.active {
     display: inline-block;
     position: relative;
-    color: white;
+    color: #538e41;
 }
 
 
