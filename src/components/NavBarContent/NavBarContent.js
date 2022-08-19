@@ -6,8 +6,9 @@ export const NavBarContent = () => {
     return (
         <>
             <header className={classes.header}>
+                <NavLink to='/' className={classes.logo}>The Cutlery Corner </NavLink>
                 <nav>
-                    <ul>
+                    <ul className={classes.nav_links}>
                         <li>
                             <NavLink to='contact-us'>Contact Us</NavLink>
                         </li>

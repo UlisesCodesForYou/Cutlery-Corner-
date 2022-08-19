@@ -6,7 +6,7 @@ export const SubNavBarContent = () => {
         <>
             <header className={classes.header}>
                 <nav>
-                    <ul>
+                    <ul className={classes.nav_links}>
                         <li>
                             <NavLink to='/'>Home Page</NavLink>
                         </li>
