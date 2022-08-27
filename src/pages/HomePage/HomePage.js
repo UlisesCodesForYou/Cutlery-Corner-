@@ -12,7 +12,7 @@ export const HomePage = () => {
                 <img src='/images/japanese.jpeg' alt=''/>
                 <img src='/images/KramerSet.jpeg' alt=''/>
                 <img src='/images/ChefKnives2.jpeg' alt=''/>
-                <img src='/images/sushi.jpeg' alt='' />
+                <img src='/images/sushi.jpeg' alt=''/>
                 <img src='/images/VegKnife.jpeg' alt=''/>
             </div>
             <p>This is the home page</p>

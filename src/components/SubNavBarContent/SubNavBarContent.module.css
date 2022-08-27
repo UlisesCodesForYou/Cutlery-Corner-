@@ -6,6 +6,8 @@
     background-color: #f5f5f5;
     text-decoration: none;
     text-align: center;
+
+
 }
 
 
@@ -53,7 +55,5 @@
     transform-origin: bottom left;
 }
 
-.sale_text{
-    color: red;
-}
+
 

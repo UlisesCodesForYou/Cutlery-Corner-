@@ -23,7 +23,7 @@ export const SubNavBarContent = () => {
                             <NavLink to='/brands'>Brands</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/knives-and-accessories'>Knives Accessories</NavLink>
+                            <NavLink to='/knives-and-accessories'>Accessories</NavLink>
                         </li>
                         <li>
                             <NavLink to='/sale-and-clearance'>Sale & Clearance</NavLink>
