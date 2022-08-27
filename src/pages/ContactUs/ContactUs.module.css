@@ -1,0 +1,7 @@
+.col {
+    display: table-row;
+}
+
+.col > * {
+    flex-basis: 100%;
+}

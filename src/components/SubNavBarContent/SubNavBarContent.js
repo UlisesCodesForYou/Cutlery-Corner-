@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import classes from './MainNavigation.module.css'
+import classes from './SubNavBarContent.module.css'
 
 export const SubNavBarContent = () => {
     return (

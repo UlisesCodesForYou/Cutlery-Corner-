@@ -1,4 +1,5 @@
 import useInput from '../../customHooks/index'
+import classes from './ContactUs.module.css'
 
 const isNotEmpty = value => value.trim() !== '';
 const isEmail = value => value.includes('@');
@@ -40,15 +41,20 @@ export const ContactUs = () => {
 
 
     return (<>
-            <div>
-                <p>Submit your info and we'll get back to you as soon as we can! </p>
+            <div className={classes.col}>
                 <h1>Contact Us</h1>
                 <p>Est Lorem cupidatat cupidatat est irure minim consequat. Amet sint eu nisi deserunt dolor velit culpa
                     tempor aliquip amet et amet adipisicing qui.</p>
+
                 <h1>Live Chat</h1>
                 <p>Est Lorem cupidatat cupidatat est irure minim consequat. Amet sint eu nisi deserunt dolor velit culpa
                     tempor aliquip amet et amet adipisicing qui.</p>
+                <p>Submit your info and we'll get back to you as soon as we can! </p>
             </div>
+
+
+
+
 
             <form onSubmit={formSubmissionHandler}>
                 <div>
@@ -74,6 +80,7 @@ export const ContactUs = () => {
                     <button disabled={!formIsValid}>Submit</button>
                 </div>
             </form>
+
         </>
 
     )
