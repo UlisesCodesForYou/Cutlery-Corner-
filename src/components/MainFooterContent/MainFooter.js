@@ -21,7 +21,7 @@ export const MainFooter = () => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul className={classes.nav_links}>
                     <li>
                         <NavLink to='/Follow-Us'>Follow Us!</NavLink>
                     </li>

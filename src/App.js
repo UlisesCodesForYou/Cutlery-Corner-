@@ -21,6 +21,7 @@ import ExpertAdvice from "./pages/ExpertAdvice";
 import FollowUs from "./pages/FollowUs";
 import HelpInfo from "./pages/HelpInfo";
 import Policies from "./pages/Policies";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path='/track-your-order' >
                 <TrackYourOrder />
             </Route>
+
         </Switch>
 
       <SubNavBarContent />
@@ -58,6 +60,9 @@ function App() {
             </Route>
             <Route path='/sale-and-clearance'>
                 <SaleAndClearance />
+            </Route>
+            <Route path='*' exact>
+                <NotFound />
             </Route>
         </Switch>
 

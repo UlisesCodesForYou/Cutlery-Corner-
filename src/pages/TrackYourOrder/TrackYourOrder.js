@@ -1,10 +1,14 @@
 import useInput from "../../customHooks";
+import {Prompt, useHistory} from "react-router-dom";
+import {useState} from "react";
 
 const isNotEmpty = value => value.trim() !== '';
 const isEmail = value => value.includes('@');
 
 
 export const TrackYourOrder = () => {
+    const history = useHistory()
+    const [isFocused, setIsFocused] = useState(false)
 
     const {
         value: enteredName,
@@ -31,6 +35,7 @@ export const TrackYourOrder = () => {
 
     const formSubmissionHandler = event => {
         event.preventDefault()
+        history.push('/')
 
         if (!enteredNameIsValid) {
             return
@@ -39,11 +44,21 @@ export const TrackYourOrder = () => {
         resetEmailInput()
     }
 
+    const formFocusedHandler = () => {
+        setIsFocused(true)
+
+    }
+
+    const finishedEnteringHandler = () => {
+        setIsFocused(false)
+    }
+
 
 
     return (
         <>
-            <form onSubmit={formSubmissionHandler}>
+            <Prompt when={isFocused} message={(location) => 'Are you sure you want to leave?  All of your information will be lost!'} />
+            <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler}>
                 <div>
                     <label htmlFor="name">Your Name</label>
                     <input type='text'
@@ -64,7 +79,7 @@ export const TrackYourOrder = () => {
                     <input type='text' id='topic'/>
                 </div>
                 <div>
-                    <button disabled={!formIsValid}>Submit</button>
+                    <button disabled={!formIsValid} onClick={finishedEnteringHandler}>Submit</button>
                 </div>
             </form>
 
