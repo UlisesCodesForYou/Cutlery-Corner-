@@ -1,7 +1,46 @@
-.col {
-    display: table-row;
+.section {
+    text-align: center;
+    padding: 16px;
+    margin: auto;
+    display: inline-block;
+    width: 30%;
 }
 
-.col > * {
-    flex-basis: 100%;
+
+.item {
+    padding: 20px;
+}
+
+.fields{
+    padding: 2rem;
+}
+
+.submissionForm {
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 2px solid;
+    padding: 2rem;
+}
+
+.submissionForm label{
+    display: block;
+    padding: .25rem;
+}
+
+.submissionForm label textarea{
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    border: 0;
+    background: #ebebf0;
+    padding: 1rem;
+    width: auto;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #c32e2e;
+    transition: .2s background ease-in;
 }

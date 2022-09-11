@@ -4,8 +4,8 @@ import classes from './SubNavBarContent.module.css'
 export const SubNavBarContent = () => {
     return (
         <>
-            <header className={classes.header}>
-                <nav>
+
+                <nav className={classes.header}>
                     <ul className={classes.nav_links}>
                         <li>
                             <NavLink to='/'>Home Page</NavLink>
@@ -31,7 +31,7 @@ export const SubNavBarContent = () => {
 
                     </ul>
                 </nav>
-            </header>
+
         </>
     )
 }

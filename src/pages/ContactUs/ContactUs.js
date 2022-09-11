@@ -1,4 +1,4 @@
-import {useHistory, Prompt } from "react-router-dom";
+import {Prompt, useHistory} from "react-router-dom";
 import {useState} from 'react';
 
 import useInput from '../../customHooks/index'
@@ -56,47 +56,59 @@ export const ContactUs = () => {
 
 
     return (<>
-            <div className={classes.col}>
+    <section className={classes.section}>
+            <div className={classes.item}>
                 <h1>Contact Us</h1>
+                <br/>
                 <p>Est Lorem cupidatat cupidatat est irure minim consequat. Amet sint eu nisi deserunt dolor velit culpa
                     tempor aliquip amet et amet adipisicing qui.</p>
+                <br/>
 
                 <h1>Live Chat</h1>
+                <br/>
                 <p>Est Lorem cupidatat cupidatat est irure minim consequat. Amet sint eu nisi deserunt dolor velit culpa
                     tempor aliquip amet et amet adipisicing qui.</p>
-                <p>Submit your info and we'll get back to you as soon as we can! </p>
             </div>
 
-            <div className={classes.col}>
-                <Prompt when={isFocused} message={(location) => 'Are you sure you want to leave? All your information will be lost.'}/>
-                <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler}>
-                    <div>
-                        <label htmlFor="name">Your Name</label>
-                        <input type='text'
-                               id='name'
-                               onChange={nameChangedHandler}
-                               onBlur={nameBlurHandler}
-                               value={enteredName}/>
-                        {nameInputHasError && <p>You must enter your name.</p>}
-                        <label htmlFor='email'>E-mail</label>
-                        <input
-                            type='email'
-                            id='email'
-                            onChange={emailChangedHandler}
-                            onBlur={emailBlurHandler}
-                            value={enteredEmail}/>
-                        {emailInputHasError && <p>Please enter a valid email.</p>}
-                        <label htmlFor='topic'>Enter your question topic</label>
-                        <textarea id='topic' rows='6'/>
-                    </div>
-                    <div>
-                        <button disabled={!formIsValid} onClick={finishedEnteringHandler}>Submit</button>
-                    </div>
-                </form>
+    </section>
 
-            </div>
-        </>
+    <section className={classes.section}>
+        <div className={classes.item}>
+            <Prompt when={isFocused}
+                    message={(location) => 'Are you sure you want to leave? All your information will be lost.'}/>
 
-    )
+            <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler} className={classes.submissionForm}>
+                <div className={classes.fields}>
+                    <label htmlFor="name">Your Name</label>
+                    <input type='text'
+                           id='name'
+                           onChange={nameChangedHandler}
+                           onBlur={nameBlurHandler}
+                           value={enteredName}/>
+                    {nameInputHasError && <p>You must enter your name.</p>}
+
+                    <label htmlFor='email'>E-mail</label>
+                    <input
+                        type='email'
+                        id='email'
+                        onChange={emailChangedHandler}
+                        onBlur={emailBlurHandler}
+                        value={enteredEmail}/>
+                    {emailInputHasError && <p>Please enter a valid email.</p>}
+
+                    <label htmlFor='topic'>Enter your question topic</label>
+                    <textarea id='topic'/>
+                </div>
+                <div>
+                    <button disabled={!formIsValid} onClick={finishedEnteringHandler} className={classes.btn}>Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+</>
+
+)
 
 }
