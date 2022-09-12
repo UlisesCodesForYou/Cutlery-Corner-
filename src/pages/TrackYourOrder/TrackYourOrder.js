@@ -1,6 +1,7 @@
 import useInput from "../../customHooks";
 import {Prompt, useHistory} from "react-router-dom";
 import {useState} from "react";
+import classes from './TrackYourOrder.module.css'
 
 const isNotEmpty = value => value.trim() !== '';
 const isEmail = value => value.includes('@');
@@ -57,31 +58,37 @@ export const TrackYourOrder = () => {
 
     return (
         <>
-            <Prompt when={isFocused} message={(location) => 'Are you sure you want to leave?  All of your information will be lost!'} />
-            <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler}>
-                <div>
-                    <label htmlFor="name">Your Name</label>
-                    <input type='text'
-                           id='name'
-                           onChange={nameChangedHandler}
-                           onBlur={nameBlurHandler}
-                           value={enteredName}/>
-                    {nameInputHasError && <p>You must enter your name.</p>}
-                    <label htmlFor='email'>E-mail</label>
-                    <input
-                        type='email'
-                        id='email'
-                        onChange={emailChangedHandler}
-                        onBlur={emailBlurHandler}
-                        value={enteredEmail}/>
-                    {emailInputHasError && <p>Please enter a valid email.</p>}
-                    <label htmlFor='topic'>Your Order Number</label>
-                    <input type='text' id='topic'/>
-                </div>
-                <div>
-                    <button disabled={!formIsValid} onClick={finishedEnteringHandler}>Submit</button>
-                </div>
-            </form>
+            <section className={classes.section}>
+               <div className={classes.item}>
+                   <Prompt when={isFocused} message={(location) => 'Are you sure you want to leave?  All of your information will be lost!'} />
+                   <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler} className={classes.TrackOrderForm}>
+                       <div>
+                           <label htmlFor="name">Your Name</label>
+                           <input type='text'
+                                  id='name'
+                                  onChange={nameChangedHandler}
+                                  onBlur={nameBlurHandler}
+                                  value={enteredName}/>
+                           {nameInputHasError && <p>You must enter your name.</p>}
+                           <label htmlFor='email'>E-mail</label>
+                           <input
+                               type='email'
+                               id='email'
+                               onChange={emailChangedHandler}
+                               onBlur={emailBlurHandler}
+                               value={enteredEmail}/>
+                           {emailInputHasError && <p>Please enter a valid email.</p>}
+                           <label htmlFor='topic'>Your Order Number</label>
+                           <input type='text' id='topic'/>
+                       </div>
+                       <div>
+                           <br/>
+                           <button disabled={!formIsValid} onClick={finishedEnteringHandler} className={classes.btn}>Submit</button>
+                       </div>
+                   </form>
+               </div>
+            </section>
+
 
         </>
     )

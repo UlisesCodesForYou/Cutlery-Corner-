@@ -50,11 +50,16 @@
     transition: transform 0.25s ease-out;
 }
 
-.nav_links li a:hover:after {
+.nav_links li a:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
+.nav_links a.active {
+    text-decoration: underline;
+    text-decoration-color: #c32e2e;
+    text-decoration-thickness: 3px;
+}
 
 
 

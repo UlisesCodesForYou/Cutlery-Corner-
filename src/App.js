@@ -25,76 +25,72 @@ import NotFound from "./pages/NotFound";
 
 
 function App() {
-  return (
-    <>
-     <NavBarContent />
-        <Switch>
-            <Route path='/contact-us'>
-                <ContactUs />
-            </Route>
-            <Route path='/track-your-order' >
-                <TrackYourOrder />
-            </Route>
+    return (
+        <>
+            <NavBarContent/>
+            <SubNavBarContent/>
+            
+            <Switch>
+                <Route path='/contact-us'>
+                    <ContactUs/>
+                </Route>
+                <Route path='/track-your-order'>
+                    <TrackYourOrder/>
+                </Route>
 
-        </Switch>
+                <Route path='/' exact>
+                    <HomePage/>
+                </Route>
+                <Route path='/top-brands'>
+                    <TopBrands/>
+                </Route>
+                <Route path='/new-arrivals'>
+                    <NewArrivals/>
+                </Route>
+                <Route path='/best-sellers'>
+                    <BestSellers/>
+                </Route>
+                <Route path='/brands'>
+                    <Brands/>
+                </Route>
+                <Route path='/knives-and-accessories'>
+                    <KnivesAndAccessories/>
+                </Route>
+                <Route path='/sale-and-clearance'>
+                    <SaleAndClearance/>
+                </Route>
+                <Route path='*' exact>
+                    <NotFound/>
+                </Route>
+            </Switch>
 
-      <SubNavBarContent />
-        <Switch>
-            <Route path='/' exact>
-                <HomePage />
-            </Route>
-            <Route path='/top-brands'>
-                <TopBrands />
-            </Route>
-            <Route path='/new-arrivals'>
-                <NewArrivals />
-            </Route>
-            <Route path='/best-sellers'>
-                <BestSellers />
-            </Route>
-            <Route path='/brands'>
-                <Brands />
-            </Route>
-            <Route path='/knives-and-accessories'>
-                <KnivesAndAccessories />
-            </Route>
-            <Route path='/sale-and-clearance'>
-                <SaleAndClearance />
-            </Route>
-            <Route path='*' exact>
-                <NotFound />
-            </Route>
-        </Switch>
+            <MainFooter/>
+            <Switch>
+                <Route path='/Free-Shipping-And-Returns-Info'>
+                    <FreeShippingInfo/>
+                </Route>
+                <Route path='/Knife-Servicing-Info'>
+                    <KnifeServicing/>
+                </Route>
+                <Route path='/Create-An-Account'>
+                    <CreateAccount/>
+                </Route>
+                <Route path='/Expert-Advice'>
+                    <ExpertAdvice/>
+                </Route>
+                <Route path='/Follow-Us'>
+                    <FollowUs/>
+                </Route>
+                <Route path='/Help'>
+                    <HelpInfo/>
+                </Route>
+                <Route path='/Policies'>
+                    <Policies/>
+                </Route>
+            </Switch>
 
-      <MainFooter />
-        <Switch>
-            <Route path='/Free-Shipping-And-Returns-Info'>
-                <FreeShippingInfo />
-            </Route>
-            <Route path='/Knife-Servicing-Info'>
-                <KnifeServicing />
-            </Route>
-            <Route path='/Create-An-Account'>
-                <CreateAccount />
-            </Route>
-            <Route path='/Expert-Advice'>
-                <ExpertAdvice />
-            </Route>
-            <Route path='/Follow-Us'>
-                <FollowUs />
-            </Route>
-            <Route path='/Help'>
-                <HelpInfo />
-            </Route>
-            <Route path='/Policies'>
-                <Policies />
-            </Route>
-        </Switch>
-
-
-
-    </>
-  );
+        </>
+    );
 }
 
 export default App;

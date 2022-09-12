@@ -58,3 +58,9 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+.nav_links a.active {
+    text-decoration: underline;
+    text-decoration-color: #c32e2e;
+    text-decoration-thickness: 3px;
+}

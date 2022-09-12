@@ -10,10 +10,10 @@ export const NavBarContent = () => {
                 <nav>
                     <ul className={classes.nav_links}>
                         <li>
-                            <NavLink to='contact-us'>Contact Us</NavLink>
+                            <NavLink to='contact-us' activeClassName={classes.active}>Contact Us</NavLink>
                         </li>
                         <li>
-                            <NavLink to='track-your-order'>Track Your Order</NavLink>
+                            <NavLink to='track-your-order' activeClassName={classes.active}>Track Your Order</NavLink>
                         </li>
                     </ul>
                 </nav>
