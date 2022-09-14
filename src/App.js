@@ -29,7 +29,7 @@ function App() {
         <>
             <NavBarContent/>
             <SubNavBarContent/>
-            
+
             <Switch>
                 <Route path='/contact-us'>
                     <ContactUs/>
@@ -65,6 +65,7 @@ function App() {
             </Switch>
 
             <MainFooter/>
+
             <Switch>
                 <Route path='/Free-Shipping-And-Returns-Info'>
                     <FreeShippingInfo/>

@@ -3,6 +3,8 @@ import classes from './HomePage.module.css'
 export const HomePage = () => {
     return (
         <div>
+            <h1>The Cutlery Corner</h1>
+            <br/>
             <div className={classes.hero}>
                 <img src='/images/Kramer.jpeg' alt=''/>
             </div>
@@ -15,7 +17,6 @@ export const HomePage = () => {
                 <img src='/images/sushi.jpeg' alt=''/>
                 <img src='/images/VegKnife.jpeg' alt=''/>
             </div>
-            <p>This is the home page</p>
         </div>
     )
 }

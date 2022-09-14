@@ -21,6 +21,7 @@ export const MainFooter = () => {
                            <NavLink to='/Expert-Advice'>EXPERT ADVICE</NavLink>
                        </li>
                    </ul>
+                   <br/>
 
                    <ul className={classes.nav_links}>
                        <li>

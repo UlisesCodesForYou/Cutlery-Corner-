@@ -25,9 +25,8 @@ export const SubNavBarContent = () => {
                         <NavLink to='/knives-and-accessories' activeClassName={classes.active}>Accessories</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/sale-and-clearance ' activeClassName={classes.active}>Sale & Clearance</NavLink>
+                        <NavLink to='/sale-and-clearance' activeClassName={classes.active}>Sale & Clearance</NavLink>
                     </li>
-
                 </ul>
             </nav>
 
