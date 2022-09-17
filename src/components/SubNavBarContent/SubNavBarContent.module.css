@@ -18,11 +18,13 @@
     font-family: sans-serif;
     font-weight: 500;
     font-size: 20px;
+    background-color: #E0E0E0;
 }
 
 
-.nav_links {
+.sub_links {
     list-style: none;
+    background-color: #E0E0E0;
 }
 
 li {
@@ -36,7 +38,7 @@ li a {
     color: #0a0a0a;
 }
 
-.sale{
+.sale {
     color: red;
 }
 
@@ -53,7 +55,7 @@ li a:after {
     transition: transform 0.25s ease-out;
 }
 
-li a:hover:after{
+li a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

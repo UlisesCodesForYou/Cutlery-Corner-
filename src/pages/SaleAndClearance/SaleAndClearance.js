@@ -1,17 +1,26 @@
 import classes from "../HomePage/HomePage.module.css";
+import {useCallback, useEffect, useState} from "react";
+import {fetchHomepage} from "../../helpers/apiHelpers";
 
 export const SaleAndClearance = () => {
+    const [images, setImages] = useState([])
+
+    const getSaleAndClearanceData = useCallback(async () => {
+        const {knives} = await fetchHomepage()
+        setImages(knives)
+
+    }, [])
+
+    useEffect(() => {
+        getSaleAndClearanceData().catch((err) => console.error(err))
+    }, [getSaleAndClearanceData])
+
+
     return (
         <div>
             <h1>Sale and Clearance</h1>
             <div className={classes.grid}>
-                <img src='/images/ChefKnives2.jpeg' alt=''/>
-                <img src='/images/German.jpeg' alt=''/>
-                <img src='/images/sushi.jpeg' alt=''/>
-                <img src='/images/KramerSet.jpeg' alt=''/>
-                <img src='/images/VegKnife.jpeg' alt=''/>
-                <img src='/images/japanese.jpeg' alt=''/>
-
+                {images.map((image) => <img src={image.src} alt={image.alt}/>)}
             </div>
         </div>
     )
