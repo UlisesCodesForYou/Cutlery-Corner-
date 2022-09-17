@@ -1,6 +1,6 @@
 import {Route, Switch} from 'react-router-dom'
 
-
+import classes from './index.module.css'
 import BestSellers from "./pages/BestSellers";
 import Brands from "./pages/Brands";
 import KnivesAndAccessories from "./pages/KnivesAndAccessories";
@@ -21,74 +21,82 @@ import ExpertAdvice from "./pages/ExpertAdvice";
 import FollowUs from "./pages/FollowUs";
 import HelpInfo from "./pages/HelpInfo";
 import Policies from "./pages/Policies";
-import NotFound from "./pages/NotFound";
 
 
 function App() {
+
     return (
         <>
-            <NavBarContent/>
-            <SubNavBarContent/>
+            <div className={classes.navigation}>
+                <NavBarContent/>
+                <SubNavBarContent/>
+            </div>
+
 
             <Switch>
-                <Route path='/contact-us'>
-                    <ContactUs/>
-                </Route>
-                <Route path='/track-your-order'>
-                    <TrackYourOrder/>
-                </Route>
+
+            </Switch>
+
+
+            <Switch>
 
                 <Route path='/' exact>
                     <HomePage/>
                 </Route>
-                <Route path='/top-brands'>
-                    <TopBrands/>
-                </Route>
-                <Route path='/new-arrivals'>
-                    <NewArrivals/>
-                </Route>
-                <Route path='/best-sellers'>
-                    <BestSellers/>
-                </Route>
-                <Route path='/brands'>
-                    <Brands/>
-                </Route>
-                <Route path='/knives-and-accessories'>
-                    <KnivesAndAccessories/>
-                </Route>
-                <Route path='/sale-and-clearance'>
-                    <SaleAndClearance/>
-                </Route>
-                <Route path='*' exact>
-                    <NotFound/>
-                </Route>
+
+                <div className={classes.container}>
+                    <Route path='/contact-us'>
+                        <ContactUs/>
+                    </Route>
+                    <Route path='/track-your-order'>
+                        <TrackYourOrder/>
+                    </Route>
+
+                    <Route path='/top-brands'>
+                        <TopBrands/>
+                    </Route>
+                    <Route path='/new-arrivals'>
+                        <NewArrivals/>
+                    </Route>
+                    <Route path='/best-sellers'>
+                        <BestSellers/>
+                    </Route>
+                    <Route path='/brands'>
+                        <Brands/>
+                    </Route>
+                    <Route path='/knives-and-accessories'>
+                        <KnivesAndAccessories/>
+                    </Route>
+                    <Route path='/sale-and-clearance'>
+                        <SaleAndClearance/>
+                    </Route>
+
+                    <Route path='/free-shipping-and-returns-info'>
+                        <FreeShippingInfo/>
+                    </Route>
+                    <Route path='/knife-servicing-info'>
+                        <KnifeServicing/>
+                    </Route>
+                    <Route path='/create-an-account'>
+                        <CreateAccount/>
+                    </Route>
+                    <Route path='/expert-advice'>
+                        <ExpertAdvice/>
+                    </Route>
+                    <Route path='/follow-Us'>
+                        <FollowUs/>
+                    </Route>
+                    <Route path='/help'>
+                        <HelpInfo/>
+                    </Route>
+                    <Route path='/policies'>
+                        <Policies/>
+                    </Route>
+
+                </div>
             </Switch>
 
             <MainFooter/>
-
-            <Switch>
-                <Route path='/Free-Shipping-And-Returns-Info'>
-                    <FreeShippingInfo/>
-                </Route>
-                <Route path='/Knife-Servicing-Info'>
-                    <KnifeServicing/>
-                </Route>
-                <Route path='/Create-An-Account'>
-                    <CreateAccount/>
-                </Route>
-                <Route path='/Expert-Advice'>
-                    <ExpertAdvice/>
-                </Route>
-                <Route path='/Follow-Us'>
-                    <FollowUs/>
-                </Route>
-                <Route path='/Help'>
-                    <HelpInfo/>
-                </Route>
-                <Route path='/Policies'>
-                    <Policies/>
-                </Route>
-            </Switch>
 
         </>
     );

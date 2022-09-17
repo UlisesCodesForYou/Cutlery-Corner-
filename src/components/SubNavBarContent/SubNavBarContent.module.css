@@ -25,18 +25,22 @@
     list-style: none;
 }
 
-.nav_links li {
+li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.nav_links li a {
+li a {
     display: inline-block;
     position: relative;
     color: #0a0a0a;
 }
 
-.nav_links li a:after {
+.sale{
+    color: red;
+}
+
+li a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -49,20 +53,19 @@
     transition: transform 0.25s ease-out;
 }
 
-.nav_links li a:hover:after{
+li a:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.nav_links a.active {
+a.active {
     text-decoration: underline;
     text-decoration-color: #c32e2e;
     text-decoration-thickness: 3px;
 }
 
-.sale{
-    color: red;
-}
+
+
 
 
 

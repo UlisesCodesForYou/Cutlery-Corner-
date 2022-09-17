@@ -1,6 +1,14 @@
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
 /*Hero image styles*/
 .hero {
-    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
     background-color: black;
     width: 100%;
     height: 100%;
