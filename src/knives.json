@@ -1,0 +1,64 @@
+{
+  "homepage": {
+    "hero": {
+      "image": {
+        "src": "/images/Kramer.jpeg",
+        "alt": "Kramer knife"
+      }
+    },
+    "knives": [
+      {
+          "src": "/images/German.jpeg",
+          "alt": "German knife"
+      },
+      {
+          "src": "/images/japanese.jpeg",
+          "alt": "Japanese knife"
+      },
+      {
+          "src": "/images/KramerSet.jpeg",
+          "alt": "Kramer Knife"
+      },
+      {
+          "src": "/images/ChefKnives2.jpeg",
+          "alt": "Chef Knife"
+      },
+      {
+          "src": "images/sushi.jpeg",
+          "alt": "Sushi Knife"
+      },
+      {
+          "src": "/images/VegKnife.jpeg",
+          "alt": "Vegetable Knife"
+      }
+    ]
+  },
+  "topBrands": {
+    "knives": [
+      {
+          "src": "/images/japanese.jpeg",
+          "alt": "Japanese knife"
+      },
+      {
+          "src": "/images/German.jpeg",
+          "alt": "German knife"
+      },
+      {
+          "src": "/images/ChefKnives2.jpeg",
+          "alt": "Chef Knife"
+      },
+      {
+          "src": "/images/VegKnife.jpeg",
+          "alt": "Vegetable Knife"
+      },
+      {
+          "src": "images/sushi.jpeg",
+          "alt": "Sushi Knife"
+      },
+      {
+          "src": "/images/KramerSet.jpeg",
+          "alt": "Kramer Knife"
+      }
+    ]
+  }
+}
