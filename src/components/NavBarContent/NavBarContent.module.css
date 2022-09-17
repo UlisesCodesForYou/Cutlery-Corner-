@@ -27,8 +27,12 @@
 
 }
 
-.nav_links {
+.head_links {
     list-style: none;
+}
+
+.color {
+    background-color: #f5f5f5 ;
 }
 
 li {

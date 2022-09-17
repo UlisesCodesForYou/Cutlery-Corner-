@@ -8,7 +8,7 @@ export const NavBarContent = () => {
             <header className={classes.header}>
                 <NavLink to='/' className={classes.logo}>The Cutlery Corner </NavLink>
 
-                <nav className={classes.nav_links}>
+                <nav className={classes.head_links}>
 
                     <ul>
                         <div className={classes.toggle}>
@@ -16,11 +16,11 @@ export const NavBarContent = () => {
                             <span className={classes.bar}></span>
                             <span className={classes.bar}></span>
                         </div>
-                        <li>
-                            <NavLink to='contact-us' activeClassName={classes.active}>Contact Us</NavLink>
+                        <li className={classes.color}>
+                            <NavLink to='contact-us' activeClassName={classes.active} className={classes.color}>Contact Us</NavLink>
                         </li>
-                        <li>
-                            <NavLink to='track-your-order' activeClassName={classes.active}>Track Your Order</NavLink>
+                        <li  className={classes.color}>
+                            <NavLink to='track-your-order' activeClassName={classes.active} className={classes.color}>Track Your Order</NavLink>
                         </li>
                     </ul>
 
