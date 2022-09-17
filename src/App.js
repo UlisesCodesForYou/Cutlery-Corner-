@@ -1,5 +1,5 @@
 import {Route, Switch} from 'react-router-dom'
-
+import {createServer} from "miragejs";
 import classes from './index.module.css'
 import BestSellers from "./pages/BestSellers";
 import Brands from "./pages/Brands";
@@ -8,7 +8,6 @@ import NewArrivals from "./pages/NewArrivals";
 import SaleAndClearance from "./pages/SaleAndClearance";
 import TopBrands from "./pages/TopBrands";
 import HomePage from "./pages/HomePage";
-
 import MainFooter from "./components/MainFooterContent";
 import NavBarContent from "./components/NavBarContent";
 import ContactUs from "./pages/ContactUs";
@@ -21,22 +20,30 @@ import ExpertAdvice from "./pages/ExpertAdvice";
 import FollowUs from "./pages/FollowUs";
 import HelpInfo from "./pages/HelpInfo";
 import Policies from "./pages/Policies";
+import knives from './knives.json'
+
+createServer({
+    routes() {
+        this.namespace = "api"
+
+        this.get("/homepage", () => {
+            return knives.homepage
+        })
+
+        this.get("/top-brands", () => {
+            return knives.topBrands
+        })
+    },
+})
 
 
 function App() {
-
     return (
         <>
             <div className={classes.navigation}>
                 <NavBarContent/>
                 <SubNavBarContent/>
             </div>
-
-
-            <Switch>
-
-            </Switch>
-
 
             <Switch>
 
