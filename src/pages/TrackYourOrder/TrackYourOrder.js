@@ -64,11 +64,13 @@ export const TrackYourOrder = () => {
                    <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler} className={classes.TrackOrderForm}>
                        <div>
                            <label htmlFor="name">Your Name</label>
+
                            <input type='text'
                                   id='name'
                                   onChange={nameChangedHandler}
                                   onBlur={nameBlurHandler}
-                                  value={enteredName}/>
+                                  value={enteredName}
+                                  className={classes.shrink}/>
                            {nameInputHasError && <p>You must enter your name.</p>}
                            <label htmlFor='email'>E-mail</label>
                            <input
@@ -76,10 +78,11 @@ export const TrackYourOrder = () => {
                                id='email'
                                onChange={emailChangedHandler}
                                onBlur={emailBlurHandler}
-                               value={enteredEmail}/>
+                               value={enteredEmail}
+                               className={classes.shrink}/>
                            {emailInputHasError && <p>Please enter a valid email.</p>}
                            <label htmlFor='topic'>Your Order Number</label>
-                           <input type='text' id='topic'/>
+                           <input type='text' id='topic' className={classes.shrink}/>
                        </div>
                        <div>
                            <br/>
