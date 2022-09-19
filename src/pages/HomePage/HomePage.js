@@ -24,6 +24,7 @@ export const HomePage = () => {
 
     return (
         <div>
+            <br/>
             <h1>The Cutlery Corner</h1>
             <br/>
             <div className={classes.hero}>

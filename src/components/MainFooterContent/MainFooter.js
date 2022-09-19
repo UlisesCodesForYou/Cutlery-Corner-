@@ -27,11 +27,11 @@ export const MainFooter = () => {
                         <li>
                             <NavLink to='/Follow-Us'>Follow Us!</NavLink>
                         </li>
-                        <li>Socials go here</li>
+                        {/*<li>Socials go here</li>*/}
                         <li>
                             <NavLink to='/Help'>Help</NavLink>
                         </li>
-                        <li>Multiple links for help goes here</li>
+                        {/*<li>Multiple links for help goes here</li>*/}
                         <li>
                             <NavLink to='/Policies'>Policies</NavLink>
                         </li>

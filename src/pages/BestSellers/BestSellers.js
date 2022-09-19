@@ -16,6 +16,7 @@ export const BestSellers = () => {
 
     return (
         <div>
+            <br/>
             <h1>Best Sellers</h1>
             <div className={classes.grid}>
                 {images.map((image) => <img src={image.src} alt={image.alt}/>)}

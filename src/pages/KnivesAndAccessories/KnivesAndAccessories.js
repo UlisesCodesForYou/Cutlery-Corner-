@@ -17,6 +17,7 @@ export const KnivesAndAccessories = () => {
 
     return (
         <div>
+            <br/>
             <h1>Accessories</h1>
             <div className={classes.grid}>
                 {images.map((image) => <img src={image.src} alt={image.alt}/>)}
