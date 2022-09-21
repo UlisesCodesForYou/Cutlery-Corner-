@@ -49,3 +49,21 @@
     background: #c32e2e;
     transition: .2s background ease-in;
 }
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active{
+    background-color: #ccc;
+    color: #292929;
+    border-color: #cccccc;
+    cursor: not-allowed;
+
+}
+
+.errorText {
+    color: #b40e0e;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: 20px;
+}

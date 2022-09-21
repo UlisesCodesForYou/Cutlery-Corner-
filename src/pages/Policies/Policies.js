@@ -1,7 +1,18 @@
 export const Policies = () =>{
     return (
         <div>
-            <p>This store is a static site I created using REACT. So, the contents on this site are just for demonstration purposes. Thank you!</p>
+            <br/>
+            <h1>Store Policies </h1>
+            <br/>
+            <br/>
+            <h2>Details below</h2>
+            <br/>
+            <p>
+                Lorem duis sit proident ad elit. Dolore enim sit excepteur consectetur ut. Deserunt dolor dolor eiusmod
+                excepteur irure ipsum nisi enim proident exercitation eiusmod. Enim sunt excepteur aliquip dolore
+                proident dolor velit anim. Labore quis aliqua ea amet.
+            </p>
+            <br/>
         </div>
     )
 }

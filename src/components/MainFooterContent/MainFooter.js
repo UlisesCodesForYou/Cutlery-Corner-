@@ -1,5 +1,6 @@
 import classes from "./MainFooter.module.css";
 import {NavLink} from "react-router-dom";
+import Social from "../social";
 
 
 export const MainFooter = () => {
@@ -27,11 +28,11 @@ export const MainFooter = () => {
                         <li>
                             <NavLink to='/Follow-Us'>Follow Us!</NavLink>
                         </li>
-                        <li>Socials go here</li>
+                       <Social/>
                         <li>
                             <NavLink to='/Help'>Help</NavLink>
                         </li>
-                        <li>Multiple links for help goes here</li>
+                        {/*<li>Multiple links for help goes here</li>*/}
                         <li>
                             <NavLink to='/Policies'>Policies</NavLink>
                         </li>

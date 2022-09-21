@@ -16,6 +16,7 @@ export const NewArrivals = () => {
 
     return (
         <div>
+            <br/>
             <h1>New Arrivals</h1>
             <div className={classes.grid}>
                 {images.map((image) => <img src={image.src} alt={image.alt}/>)}
