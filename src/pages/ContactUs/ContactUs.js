@@ -100,7 +100,7 @@ export const ContactUs = () => {
                                        onChange={nameChangedHandler}
                                        onBlur={nameBlurHandler}
                                        value={enteredName}/>
-                                {nameInputHasError && <p className={classes.errorText}>You must enter your name.</p>}
+                                {nameInputHasError && <p className={classes.errorText}>Please enter your name.</p>}
 
                                 <label htmlFor='email'>E-mail</label>
                                 <input
