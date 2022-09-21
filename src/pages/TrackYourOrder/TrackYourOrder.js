@@ -5,6 +5,7 @@ import classes from './TrackYourOrder.module.css'
 
 const isNotEmpty = value => value.trim() !== '';
 const isEmail = value => value.includes('@');
+const orderIsNotEmpty = value => value.trim() !== ''
 
 
 export const TrackYourOrder = () => {
@@ -29,8 +30,17 @@ export const TrackYourOrder = () => {
         inputBlurHandler: emailBlurHandler
     } = useInput(isEmail);
 
+    const {
+        value: enteredOrder,
+        isValid: enteredOrderIsValid,
+        hasError: orderInputHasError,
+        valueChangeHandler: orderChangedHandler,
+        reset: resetOrderInput,
+        inputBlurHandler: orderBlurHandler
+    } = useInput(orderIsNotEmpty)
+
     let formIsValid = false
-    if (enteredNameIsValid && enteredEmailIsValid) {
+    if (enteredNameIsValid && enteredEmailIsValid && enteredOrderIsValid) {
         formIsValid = true
     }
 
@@ -43,6 +53,7 @@ export const TrackYourOrder = () => {
         }
         resetNameInput()
         resetEmailInput()
+        resetOrderInput()
     }
 
     const formFocusedHandler = () => {
@@ -54,24 +65,23 @@ export const TrackYourOrder = () => {
         setIsFocused(false)
     }
 
-
-
     return (
         <>
             <section className={classes.section}>
                <div className={classes.item}>
                    <Prompt when={isFocused} message={(location) => 'Are you sure you want to leave?  All of your information will be lost!'} />
-                   <form onSubmit={formSubmissionHandler} onFocus={formFocusedHandler} className={classes.TrackOrderForm}>
+                   <form onSubmit={formSubmissionHandler}
+                         onFocus={formFocusedHandler}
+                         className={classes.TrackOrderForm}>
                        <div>
                            <label htmlFor="name">Your Name</label>
-
                            <input type='text'
                                   id='name'
                                   onChange={nameChangedHandler}
                                   onBlur={nameBlurHandler}
                                   value={enteredName}
                                   className={classes.shrink}/>
-                           {nameInputHasError && <p>You must enter your name.</p>}
+                           {nameInputHasError && <p className={classes.errorText}>Please enter your name</p>}
                            <label htmlFor='email'>E-mail</label>
                            <input
                                type='email'
@@ -80,9 +90,14 @@ export const TrackYourOrder = () => {
                                onBlur={emailBlurHandler}
                                value={enteredEmail}
                                className={classes.shrink}/>
-                           {emailInputHasError && <p>Please enter a valid email.</p>}
+                           {emailInputHasError && <p className={classes.errorText}>Please enter a valid email</p>}
                            <label htmlFor='topic'>Your Order Number</label>
-                           <input type='text' id='topic' className={classes.shrink}/>
+                           <input type='text'
+                                  id='topic'
+                                  onChange={orderChangedHandler}
+                                  onBlur={orderBlurHandler}
+                                  value={enteredOrder}/>
+                           {orderInputHasError && <p className={classes.errorText}>Please enter your order number</p>}
                        </div>
                        <div>
                            <br/>
