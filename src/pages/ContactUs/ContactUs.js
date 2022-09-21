@@ -1,6 +1,5 @@
 import {Prompt, useHistory} from "react-router-dom";
 import {useState} from 'react';
-
 import useInput from '../../customHooks/index'
 import classes from './ContactUs.module.css'
 
