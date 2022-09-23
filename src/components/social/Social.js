@@ -6,16 +6,16 @@ export const Social = () => {
     return (
         <>
             <div className={classes.socialContainer}>
-                <a href='https://www.youtube.com/' className={classes.anchor}>
+                <a href='https://www.youtube.com/' target='_blank' rel='noopener noreferrer' className={classes.anchor}>
                     <FontAwesomeIcon icon={faYoutube} size='2x' className={classes.icon}/>
                 </a>
-                <a href='https://www.facebook.com/' className={classes.anchor}>
+                <a href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'  className={classes.anchor}>
                     <FontAwesomeIcon icon={faFacebook} size='2x' className={classes.icon}/>
                 </a>
-                <a href='https://twitter.com/' className={classes.anchor}>
+                <a href='https://twitter.com/' target='_blank' rel='noopener noreferrer'  className={classes.anchor}>
                     <FontAwesomeIcon icon={faTwitter} size='2x' className={classes.icon}/>
                 </a>
-                <a href='https://www.instagram.com/' className={classes.anchor}>
+                <a href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer'  className={classes.anchor}>
                     <FontAwesomeIcon icon={faInstagram} size='2x' className={classes.icon}/>
                 </a>
             </div>
