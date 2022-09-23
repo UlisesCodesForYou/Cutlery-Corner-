@@ -20,7 +20,8 @@ import ExpertAdvice from "./pages/ExpertAdvice";
 import FollowUs from "./pages/FollowUs";
 import HelpInfo from "./pages/HelpInfo";
 import Policies from "./pages/Policies";
-import knives from './knives.json'
+import knives from './knives.json';
+
 
 createServer({
     routes() {

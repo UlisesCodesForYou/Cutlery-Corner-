@@ -9,7 +9,7 @@ export const MainFooter = () => {
             <footer className={classes.footer}>
                 <nav>
                     <ul className={classes.foot_links}>
-                        <li className={classes.backcolor}>
+                        <li>
                             <NavLink to='/Free-Shipping-And-Returns-Info'>FREE SHIPPING AND RETURNS ON ALL ORDERS</NavLink>
                         </li>
                         <li>
