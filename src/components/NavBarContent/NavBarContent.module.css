@@ -71,32 +71,32 @@ a.active {
 }
 
 
-.toggle {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-}
+/*.toggle {*/
+/*    position: absolute;*/
+/*    top: .75rem;*/
+/*    right: 1rem;*/
+/*    display: none;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    width: 30px;*/
+/*    height: 20px;*/
+/*}*/
 
-.bar {
-    height: 4px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
-}
+/*.bar {*/
+/*    height: 4px;*/
+/*    width: 100%;*/
+/*    background-color: black;*/
+/*    border-radius: 10px;*/
+/*}*/
 
-@media all and (max-width: 700px) {
-    .toggle {
-        display: flex;
-    }
+/*@media all and (max-width: 700px) {*/
+/*    .toggle {*/
+/*        display: flex;*/
+/*    }*/
 
-    .nav_links {
-        display: none;
-    }
+/*    .nav_links {*/
+/*        display: none;*/
+/*    }*/
 
 
-}
+/*}*/
