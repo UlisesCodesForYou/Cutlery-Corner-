@@ -11,11 +11,6 @@ export const NavBarContent = () => {
                 <nav className={classes.head_links}>
 
                     <ul>
-                        <div className={classes.toggle}>
-                            <span className={classes.bar}></span>
-                            <span className={classes.bar}></span>
-                            <span className={classes.bar}></span>
-                        </div>
                         <li className={classes.color}>
                             <NavLink to='contact-us' activeClassName={classes.active} className={classes.color}>Contact Us</NavLink>
                         </li>
