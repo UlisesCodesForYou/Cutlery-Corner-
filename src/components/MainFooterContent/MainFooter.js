@@ -26,7 +26,7 @@ export const MainFooter = () => {
 
                     <ul className={classes.foot_links}>
                         <li>
-                            <NavLink to='/Follow-Us'>Follow Us!</NavLink>
+                            <h1 className={classes.follow}>Follow Us!</h1>
                         </li>
                        <Social/>
                         <li>
