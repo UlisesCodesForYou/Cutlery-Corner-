@@ -56,3 +56,8 @@ li a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+.follow {
+    background-color: #E0E0E0;
+    font-weight: 500;
+}
