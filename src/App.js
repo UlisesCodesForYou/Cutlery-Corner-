@@ -41,25 +41,27 @@ createServer({
 function App() {
     return (
         <>
-            <div className={classes.navigation}>
+            <div>
                 <NavBarContent/>
                 <SubNavBarContent/>
             </div>
 
             <Switch>
-
                 <Route path='/' exact>
                     <HomePage/>
                 </Route>
 
-                <div className={classes.container}>
-                    <Route path='/contact-us'>
-                        <ContactUs/>
-                    </Route>
-                    <Route path='/track-your-order'>
-                        <TrackYourOrder/>
-                    </Route>
+                <Route path='/contact-us'>
+                    <ContactUs/>
+                </Route>
+                <Route path='/track-your-order'>
+                    <TrackYourOrder/>
+                </Route>
+            </Switch>
 
+            <Switch>
+
+                <div className={classes.container}>
                     <Route path='/top-brands'>
                         <TopBrands/>
                     </Route>
